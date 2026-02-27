@@ -69,7 +69,7 @@
   <script>
   // Selecione a imagem e os parágrafos pelo ID
   const image  = document.querySelector('#myImage');
-  const text = document.querySelector('myText');
+  const text = document.querySelector('#myText');
   const subText = document.querySelector('#subText');
 
   // Define as URLs das imagens
@@ -80,19 +80,19 @@
   image.addEventListener('mouseover', () => {
     // Altera a imagem para a alternativa
     image.src = imagemAlternativa;
+    // Altera o texto adicional
+    subText.textContent = 'Doja Cat - Little cat!';
     // Altera o texto principal
     text.textContent = 'Imagem alterada';
-    // Altera o texto adicional
-    subText.textContent = 'Doja Cat - Little cat!'
   });
-  // Adiciona um evento de "mouseout" (quando o mause sai da imagem)
+  // Adiciona um evento de "mouseout" (quando o mouse sai da imagem)
   image.addEventListener('mouseout', () => {
     // Volta a imagem original
     image.src = imagemOriginal;
-    // Restaure o texto principal
-    text.textContent = 'Passe o mouse sobre a imagem';
     // Restaura o texto adicional
     subText.textContent = 'Sabrina Carpenter - Linda!';
+    // Restaure o texto principal
+    text.textContent = 'Passe o mouse sobre a imagem';
   })
 
 
