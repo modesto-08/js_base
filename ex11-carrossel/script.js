@@ -38,7 +38,11 @@ function stopAutoSlide() {
 }
 
 // Adiciona um evento de clique ao botão "Anterior"
-
+    prevButton.addEventListener('click', () => {
+      prevSlide(); // Exibe o slide anterior 
+      stopAutoSlide(); // Pausa a transição automatica
+      startAutoSlide(); // Reinicia a transição automática
+    });
 
 // Adiciona um evento de clique ao botão "Próximo"
 nextButton.addEventListener('click', () => {
